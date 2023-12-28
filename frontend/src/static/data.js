@@ -27,7 +27,7 @@ export const navItems = [
     {
       id: 1,
       title: "Free Shipping",
-      Description: "From all orders over 100$",
+      Description: "From all orders over 100D",
       icon: (
         <svg
           width="36"
@@ -194,62 +194,62 @@ export const navItems = [
       title: "Computers and Laptops",
       subTitle: "",
       image_Url:
-        "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+        "https://img.freepik.com/vecteurs-premium/concept-sondage-ligne-isometrique-moderne-personnage_32192-412.jpg?w=740",
     },
     {
       id: 2,
       title: "cosmetics and body care",
       subTitle: "",
       image_Url:
-        "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+        "https://img.freepik.com/vecteurs-libre/produits-beaute-plats-soins-capillaires-illustration-petits-personnages-feminins_1284-53941.jpg?size=626&ext=jpg&uid=R72695730&ga=GA1.2.1598660921.1698570248&semt=ais",
     },
     {
       id: 3,
       title: "Accesories",
       subTitle: "",
       image_Url:
-        "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+        "https://img.freepik.com/vecteurs-premium/vecteur-peinture-accessoire-femme_75052-62.jpg?size=626&ext=jpg&uid=R72695730&ga=GA1.2.1598660921.1698570248&semt=ais",
     },
     {
       id: 4,
       title: "Cloths",
       subTitle: "",
       image_Url:
-        "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+        "https://img.freepik.com/vecteurs-libre/stickers-vetements-accessoires-kawaii_52683-73505.jpg?size=626&ext=jpg&uid=R72695730&ga=GA1.2.1598660921.1698570248&semt=sph",
     },
     {
       id: 5,
       title: "Shoes",
       subTitle: "",
       image_Url:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+        "https://img.freepik.com/vecteurs-libre/paire-chaussures-cuir-marron_1308-135609.jpg?size=626&ext=jpg&uid=R72695730&ga=GA1.2.1598660921.1698570248&semt=sph",
     },
     {
       id: 6,
       title: "Gifts",
       subTitle: "",
       image_Url:
-        "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
+        "https://img.freepik.com/vecteurs-premium/boite-cadeau-ouverte-vierge-ruban-rouge-archet-isole-fond-blanc-illustration-vectorielle-3d-realiste_545793-1142.jpg?size=626&ext=jpg&uid=R72695730&ga=GA1.1.1598660921.1698570248&semt=sph",
     },
     {
       id: 7,
       title: "Pet Care",
       subTitle: "",
-      image_Url: "https://cdn.openpr.com/T/c/Tc15444071_g.jpg",
+      image_Url: "https://img.freepik.com/vecteurs-libre/personnes-plates-animaux-domestiques_52683-65391.jpg?w=740&t=st=1703705829~exp=1703706429~hmac=451acc6c4ed19d168b5c22e783d101a5b4fa0e7a080a9640245203ec0655b41c",
     },
     {
       id: 8,
       title: "Mobile and Tablets",
       subTitle: "",
       image_Url:
-        "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
+        "https://img.freepik.com/vecteurs-premium/maquette-gadgets-appareils-stylet-smartphone-tablette-ordinateur-portable-moniteur-ordinateur-economiseur-ecran-colore-isole_175654-464.jpg?size=626&ext=jpg&uid=R72695730&ga=GA1.2.1598660921.1698570248&semt=ais",
     },
     {
       id: 9,
       title: "Music and Gaming",
       subTitle: "",
       image_Url:
-        "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+        "https://img.freepik.com/vecteurs-premium/jeu-video-enfants-jouant-console-combat-gamepad-ordinateur-mobile-android-illustration_2175-8706.jpg?size=626&ext=jpg&uid=R72695730&ga=GA1.1.1598660921.1698570248&semt=ais",
     },
     {
       id: 10,
