@@ -14,7 +14,7 @@ const ProductCard = ({ data }) => {
   const [click, setClick] = useState(false);
   const [open, setOpen] = useState(false);
   const d = data.name;
-  const product_name = d.replace(/\+/g, "-");
+  const product_name = d.replace(/\s+/g, "-");
 
   return (
     <>
@@ -42,7 +42,7 @@ const ProductCard = ({ data }) => {
           <div className="py-2 flex items-center justify-between">
             <div className="flex">
               <h5 className={`${styles.productDiscountPrice}`}>
-                {data.price === 0 ? data.price : data.discount_price}$
+                {data.price === 0 ? data.price : data.discount_price}D
               </h5>
               <h4 className={`${styles.price}`}>
                 {data.price ? data.price + " D" : null}

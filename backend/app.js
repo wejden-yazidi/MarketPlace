@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const user = require("./controllers/user.js");
+const shop = require("./controllers/shop.js");
 
 app.use(express.json());
 app.use(cookieParser());
@@ -19,6 +20,7 @@ app.use("/", express.static("uploads"));
 
 // Routes
 app.use("/api/user", user);
+app.use("/api/shop", shop);
 
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {

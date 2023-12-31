@@ -28,5 +28,9 @@ export const userReducer = createReducer(initialState, (builder) => {
       state.loading = false;
       state.error = action.payload;
       state.isAuthenticated = false;
+    })
+    .addCase("clearErrors", (state) => {
+      state.error = null;
     });
 });
+export default userReducer;

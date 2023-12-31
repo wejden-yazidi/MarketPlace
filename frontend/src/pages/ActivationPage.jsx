@@ -23,7 +23,7 @@ const ActivationPage = () => {
             };
             activationEmail();
         }
-    }, [activation_token]); // Include 'activation_token' in the dependency array
+    }, []); // Include 'activation_token' in the dependency array
 
     return (
         <div
