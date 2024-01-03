@@ -47,7 +47,6 @@ const ShopCreate = () => {
         toast.error(error.response.data.message);
       });
   };
-   
 
   const handleFileInputChange = (e) => {
     const file = e.target.files[0];
@@ -202,7 +201,7 @@ const ShopCreate = () => {
                 <span className="inline-block h-8 w-8 rounded-full overflow-hidden">
                   {avatar ? (
                     <img
-                       src={URL.createObjectURL(avatar)}
+                      src={URL.createObjectURL(avatar)}
                       alt="avatar"
                       className="h-full w-full object-cover rounded-full"
                     />

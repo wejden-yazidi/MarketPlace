@@ -6,7 +6,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const user = require("./controllers/user.js");
 const shop = require("./controllers/shop.js");
-
+const product = require("./controllers/product.js");
+const event = require("./controllers/event.js");
+const coupon = require("./controllers/coupounCode");
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -21,6 +23,10 @@ app.use("/", express.static("uploads"));
 // Routes
 app.use("/api/user", user);
 app.use("/api/shop", shop);
+app.use("/api/product", product);
+app.use("/api/event", event);
+app.use("/api/coupon", coupon);
+
 
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {

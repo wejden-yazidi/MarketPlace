@@ -89,7 +89,7 @@ router.post(
       const { name, email, password, avatar, zipCode, address, phoneNumber } =
         newSeller;
 
-      let seller = await User.findOne({ email });
+      let seller = await Shop.findOne({ email });
 
       if (seller) {
         return next(new ErrorHandler("Seller already exists", 400));
@@ -118,11 +118,10 @@ router.get(
   isSeller,
   catchAsyncErrors(async (req, res, next) => {
     try {
-      console.log(seller);
       const seller = await Shop.findById(req.seller._id);
 
       if (!seller) {
-        return next(new ErrorHandler("Shop doesn't exists", 400));
+        return next(new ErrorHandler("User doesn't exists", 400));
       }
 
       res.status(200).json({
@@ -175,8 +174,7 @@ router.get(
       res.cookie("seller_token", null, {
         expires: new Date(Date.now()),
         httpOnly: true,
-        sameSite: "none",
-        secure: true,
+       
       });
       res.status(201).json({
         success: true,
@@ -187,5 +185,23 @@ router.get(
     }
   })
 );
+
+// get shop info
+router.get(
+  "/get-shop-info/:id",
+  catchAsyncErrors(async (req, res, next) => {
+    try {
+      const shop = await Shop.findById(req.params.id);
+      res.status(201).json({
+        success: true,
+        shop,
+      });
+    } catch (error) {
+      return next(new ErrorHandler(error.message, 500));
+    }
+  })
+);
+
+
 
 module.exports = router;

@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../../styles/styles";
 import ProductCard from "../ProductCard/ProductCard.jsx";
-import { productData } from "../../../static/data.js";
+import { useSelector } from "react-redux";
 
 const BestDeals = () => {
   const [data, setData] = useState([]);
-
+  const { allProducts } = useSelector((state) => state.products);
   useEffect(() => {
-    // Sorting products based on total_sell in descending order
-    const sortedProducts = productData.sort((a, b) => b.total_sell - a.total_sell);
-    // Selecting the first five products
-    const firstFive = sortedProducts.slice(0, 5);
+    const allProductsData = allProducts ? [...allProducts] : [];
+    const sortedData = allProductsData?.sort((a,b) => b.sold_out - a.sold_out); 
+    const firstFive = sortedData && sortedData.slice(0, 5);
     setData(firstFive);
-  }, []);
-
+  }, [allProducts]);
   return (
     <section className={`${styles.section} py-12 bg-gray-100`}>
       <div className="container mx-auto">
@@ -23,9 +21,13 @@ const BestDeals = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-          {data.map((product, index) => (
-            <ProductCard data={product} key={index} />
-          ))}
+        {
+            data && data.length !== 0 &&(
+              <>
+               {data && data.map((i, index) => <ProductCard data={i} key={index} />)}
+              </>
+            )
+           }
         </div>
       </div>
     </section>
