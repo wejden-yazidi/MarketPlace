@@ -36,12 +36,14 @@ import {
   ShopPreviewPage,
 } from "./routes/ShopRoutes";
 import { ShopHomePage } from "./ShopRoutes";
+import { getAllEvents } from "./redux/actions/event";
 
 const App = () => {
   useEffect(() => {
     Store.dispatch(loadUser());
     Store.dispatch(loadSeller());
     Store.dispatch(getAllProducts());
+    Store.dispatch(getAllEvents());
   }, []);
 
   return (
@@ -62,7 +64,7 @@ const App = () => {
         <Route path="/best-selling" element={<BestSellingPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/faq" element={<FAQPage />} />
-        <Route path="/product/:name" element={<ProductDetailsPage />} />
+        <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/order/success" element={<OrderSuccessPage />} />
         <Route
           path="/checkout"
@@ -81,7 +83,8 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        {/*shop Routes */}
+           <Route path="/shop/preview/:id" element={<ShopPreviewPage />} />
+        {/* shop Routes */}
         <Route path="/shop-create" element={<ShopCreatePage />} />
         <Route path="/shop-login" element={<ShopLoginPage />} />
         <Route
@@ -92,7 +95,7 @@ const App = () => {
             </SellerProtectedRoute>
           }
         />
-        <Route
+         <Route
           path="/dashboard"
           element={
             <SellerProtectedRoute>
@@ -140,7 +143,7 @@ const App = () => {
             </SellerProtectedRoute>
           }
         />
-        <Route path="/shop/preview/:id" element={<ShopPreviewPage />} />
+       
       </Routes>
 
       <ToastContainer
