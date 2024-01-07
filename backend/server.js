@@ -1,6 +1,6 @@
 const app = require("./app");
 const connectDatabase = require("./db/DataBase");
-
+const cloudinary = require("cloudinary");
 
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
@@ -21,7 +21,14 @@ const server = app.listen(process.env.PORT, () => {
 });
 
 //connect db
-connectDatabase()
+connectDatabase();
+
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+})
  
 // unhandled promise rejection
 process.on("unhandledRejection", (err) => {
