@@ -1,9 +1,15 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createReducer ,createAction} from "@reduxjs/toolkit";
 
 const initialState = {
   isLoading: true,
  
 };
+// Define action creators using createAction
+export const eventCreateRequest = createAction("prodeventCreateRequestuctCreateRequest");
+export const eventCreateSuccess = createAction("eventCreateSuccess", (payload) => ({ payload })); // Include payload for action
+export const eventCreateFail = createAction("eventCreateFail", (payload) => ({ payload })); // Include payload for action
+export const clearErrors = createAction("clearErrors");
+
 
 export const eventReducer = createReducer(initialState, (builder) => {
   builder

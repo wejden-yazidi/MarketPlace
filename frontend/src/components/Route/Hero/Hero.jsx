@@ -15,7 +15,7 @@ const Hero = () => {
         <h1
           className={`text-4xl md:text-6xl font-semibold leading-tight mb-4 text-[#FEB139]`}
         >
-          Discover the Art <br /> of Home Decor
+          Discover the Product <br /> from the real shop
         </h1>
         <p className="text-lg md:text-xl mb-8 text-[#FEB139]">
           Elevate your living space with our curated selection of unique and inspiring home decor pieces.

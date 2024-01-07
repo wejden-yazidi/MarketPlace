@@ -1,4 +1,4 @@
-import { createReducer } from "@reduxjs/toolkit";
+import { createReducer, createAction } from "@reduxjs/toolkit";
 
 const initialState = {
   isLoading: true,
@@ -9,6 +9,12 @@ const initialState = {
   allProducts: [],
   error: null,
 };
+// Define action creators using createAction
+export const productCreateRequest = createAction("productCreateRequest");
+export const productCreateSuccess = createAction("productCreateSuccess", (payload) => ({ payload })); // Include payload for action
+export const productCreateFail = createAction("productCreateFail", (payload) => ({ payload })); // Include payload for action
+export const clearErrors = createAction("clearErrors");
+
 
 export const productReducer = createReducer(initialState, (builder) => {
   builder

@@ -22,7 +22,7 @@ const CountDown = ({ data }) => {
   });
 
   function calculateTimeLeft() {
-    const difference = +new Date("2024-02-14") - +new Date();
+    const difference = +new Date(data.Finish_Date) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -43,14 +43,14 @@ const CountDown = ({ data }) => {
     }
 
     return (
-      <span key={interval} className="text-[25px] text-[#475ad2]">
+      <span className="text-[25px] text-[#475ad2]">
         {timeLeft[interval]} {interval}{" "}
       </span>
     );
   });
 
   return (
-    <div >
+    <div>
       {timerComponents.length ? (
         timerComponents
       ) : (

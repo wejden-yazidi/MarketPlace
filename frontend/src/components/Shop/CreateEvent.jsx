@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { categoriesData } from "../../static/data";
 import { toast } from "react-toastify";
-import { createevent } from "../../redux/actions/event";
+import { createEvent } from "../../redux/actions/event";
 
 const CreateEvent = () => {
   const { seller } = useSelector((state) => state.seller);
@@ -28,11 +28,9 @@ const CreateEvent = () => {
     const minEndDate = new Date(startDate.getTime() + 3 * 24 * 60 * 60 * 1000);
     setStartDate(startDate);
     setEndDate(null);
-    document.getElementById("end-date").min = minEndDate.toISOString.slice(
-      0,
-      10
-    );
+    document.getElementById("end-date").min = minEndDate.toISOString().slice(0, 10); // Ajout de "()"
   };
+  
 
   const handleEndDateChange = (e) => {
     const endDate = new Date(e.target.value);
@@ -57,6 +55,8 @@ const CreateEvent = () => {
       window.location.reload();
     }
   }, [dispatch, error, success]);
+
+ 
 
   const handleImageChange = (e) => {
     e.preventDefault();
@@ -84,7 +84,7 @@ const CreateEvent = () => {
     newForm.append("start_Date", startDate.toISOString());
     newForm.append("Finish_Date", endDate.toISOString());
 
-    dispatch(createevent(newForm));
+    dispatch(createEvent(newForm));
   };
 
   return (
