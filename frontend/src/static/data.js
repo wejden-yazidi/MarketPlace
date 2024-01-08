@@ -301,11 +301,11 @@ export const navItems = [
       image_Url: [
         {
           public_id: "test",
-          url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+          url: "https://i.pinimg.com/564x/26/be/56/26be56634ad9773c9d8f6315cac2cba7.jpg",
         },
         {
           public_id: "test",
-          url: "https://m.media-amazon.com/images/I/31Vle5fVdaL.jpg",
+          url: "https://i.pinimg.com/236x/b8/a1/ac/b8a1aca88c0505524bfa6339a0f6f8a4.jpg",
         },
       ],
       shop: {

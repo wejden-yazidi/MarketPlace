@@ -129,27 +129,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         </span>
       </div>
 
-      {/* {user && user?.role === "Admin" && (
-        <Link to="/admin/dashboard">
-          <div
-            className="flex items-center cursor-pointer w-full mb-8"
-            onClick={() => setActive(8)}
-          >
-            <MdOutlineAdminPanelSettings
-              size={20}
-              color={active === 7 ? "red" : ""}
-            />
-            <span
-              className={`pl-3 ${
-                active === 8 ? "text-[red]" : ""
-              } 800px:block hidden`}
-            >
-              Admin Dashboard
-            </span>
-          </div>
-        </Link>
-      )}
-       */}
+    
       <div
         className="single_item flex items-center cursor-pointer w-full mb-8"
         onClick={logoutHandler}

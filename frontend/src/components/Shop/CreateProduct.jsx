@@ -195,6 +195,7 @@ const CreateProduct = () => {
           <input
             type="file"
             name=""
+            accept=".jpg,.jpeg,.png"
             id="upload"
             className="hidden"
             multiple
