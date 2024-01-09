@@ -9,6 +9,8 @@ const shop = require("./controllers/shop.js");
 const product = require("./controllers/product.js");
 const event = require("./controllers/event.js");
 const coupon = require("./controllers/coupounCode");
+const conversation = require("./controllers/conversation");
+const message = require("./controllers/message");
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -17,7 +19,7 @@ app.use(
     credentials: true,
   })
 );
-app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: false, parameterLimit: 50000 }));
 app.use("/", express.static("uploads"));
 
 // Routes
@@ -26,6 +28,8 @@ app.use("/api/shop", shop);
 app.use("/api/product", product);
 app.use("/api/event", event);
 app.use("/api/coupon", coupon);
+app.use("/api/conversation", conversation);
+app.use("/api/message", message);
 
 
 // config

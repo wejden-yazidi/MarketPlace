@@ -46,7 +46,7 @@ const ProfileSidebar = ({ setActive, active }) => {
           Profile
         </span>
       </div>
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(2)}
       >
@@ -71,7 +71,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           Refunds
         </span>
-      </div>
+      </div> */}
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"
@@ -87,7 +87,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         </span>
       </div>
 
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(5)}
       >
@@ -99,7 +99,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           Track Order
         </span>
-      </div>
+      </div> */}
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"

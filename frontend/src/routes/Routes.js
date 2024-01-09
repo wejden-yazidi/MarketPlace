@@ -13,11 +13,13 @@ import CheckoutPage from "../pages/CheckoutPage.jsx";
 import ShopCreatePage from "../pages/ShopCreatePage.jsx";
 import SellerActivationPage from "../pages/SellerActivationPage.jsx";
 import ShopLoginPage from "../pages/ShopLoginPage.jsx";
+import UserInbox from "../pages/UserInbox.jsx";
 
 export {
     LoginPage,SignupPage,
     ActivationPage,HomePage,
     ProductsPage,BestSellingPage,CheckoutPage, 
     EventsPage,FAQPage,ProductDetailsPage, OrderSuccessPage,
-    ShopCreatePage,  ProfilePage,SellerActivationPage,ShopLoginPage,
+    ShopCreatePage,  ProfilePage,SellerActivationPage,
+    ShopLoginPage,UserInbox
 };

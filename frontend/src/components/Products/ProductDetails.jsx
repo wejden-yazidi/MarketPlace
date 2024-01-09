@@ -197,14 +197,14 @@ const ProductDetails = ({ data }) => {
                     )}
                   </div>
                 </div>
-                <div
+                {/* <div
                   className={`${styles.button} !mt-6 !rounded !h-11 flex items-center`}
                   onClick={() => addToCartHandler(data._id)}
                 >
                   <span className="text-white flex items-center">
                     Add to cart <AiOutlineShoppingCart className="ml-1" />
                   </span>
-                </div>
+                </div> */}
                 <div className="flex items-center pt-8">
                   <Link to={`/shop/preview/${data?.shop._id}`}>
                     <img
